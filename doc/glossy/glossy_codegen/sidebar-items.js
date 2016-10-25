@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Language","The language that glossy will target when optimizing shaders."]],"struct":[["Config","Configuration for the glossy shader preprocessor."]]});

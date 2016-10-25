@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `glsl_optimizer_sys` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, glsl_optimizer_sys">
+
+    <title>glsl_optimizer_sys - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'></p><script>window.sidebarCurrent = {name: 'glsl_optimizer_sys', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>glsl_optimizer_sys</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-0' class='srclink' href='../src/glsl_optimizer_sys/lib.rs.html#1-105' title='goto source code'>[src]</a></span></h1>
+<h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.glslopt_ctx.html'
+                                  title='glsl_optimizer_sys::glslopt_ctx'>glslopt_ctx</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.glslopt_shader.html'
+                                  title='glsl_optimizer_sys::glslopt_shader'>glslopt_shader</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.kGlslOptShaderFragment.html'
+                                  title='glsl_optimizer_sys::kGlslOptShaderFragment'>kGlslOptShaderFragment</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.kGlslOptShaderVertex.html'
+                                  title='glsl_optimizer_sys::kGlslOptShaderVertex'>kGlslOptShaderVertex</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.kGlslOptionNotFullShader.html'
+                                  title='glsl_optimizer_sys::kGlslOptionNotFullShader'>kGlslOptionNotFullShader</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.kGlslOptionSkipPreprocessor.html'
+                                  title='glsl_optimizer_sys::kGlslOptionSkipPreprocessor'>kGlslOptionSkipPreprocessor</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.kGlslPrecCount.html'
+                                  title='glsl_optimizer_sys::kGlslPrecCount'>kGlslPrecCount</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.kGlslPrecHigh.html'
+                                  title='glsl_optimizer_sys::kGlslPrecHigh'>kGlslPrecHigh</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.kGlslPrecLow.html'
+                                  title='glsl_optimizer_sys::kGlslPrecLow'>kGlslPrecLow</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.kGlslPrecMedium.html'
+                                  title='glsl_optimizer_sys::kGlslPrecMedium'>kGlslPrecMedium</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.kGlslTargetMetal.html'
+                                  title='glsl_optimizer_sys::kGlslTargetMetal'>kGlslTargetMetal</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.kGlslTargetOpenGL.html'
+                                  title='glsl_optimizer_sys::kGlslTargetOpenGL'>kGlslTargetOpenGL</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.kGlslTargetOpenGLES20.html'
+                                  title='glsl_optimizer_sys::kGlslTargetOpenGLES20'>kGlslTargetOpenGLES20</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.kGlslTargetOpenGLES30.html'
+                                  title='glsl_optimizer_sys::kGlslTargetOpenGLES30'>kGlslTargetOpenGLES30</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.kGlslTypeBool.html'
+                                  title='glsl_optimizer_sys::kGlslTypeBool'>kGlslTypeBool</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.kGlslTypeCount.html'
+                                  title='glsl_optimizer_sys::kGlslTypeCount'>kGlslTypeCount</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.kGlslTypeFloat.html'
+                                  title='glsl_optimizer_sys::kGlslTypeFloat'>kGlslTypeFloat</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.kGlslTypeInt.html'
+                                  title='glsl_optimizer_sys::kGlslTypeInt'>kGlslTypeInt</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.kGlslTypeOther.html'
+                                  title='glsl_optimizer_sys::kGlslTypeOther'>kGlslTypeOther</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.kGlslTypeTex2D.html'
+                                  title='glsl_optimizer_sys::kGlslTypeTex2D'>kGlslTypeTex2D</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.kGlslTypeTex2DArray.html'
+                                  title='glsl_optimizer_sys::kGlslTypeTex2DArray'>kGlslTypeTex2DArray</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.kGlslTypeTex2DShadow.html'
+                                  title='glsl_optimizer_sys::kGlslTypeTex2DShadow'>kGlslTypeTex2DShadow</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.kGlslTypeTex3D.html'
+                                  title='glsl_optimizer_sys::kGlslTypeTex3D'>kGlslTypeTex3D</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.kGlslTypeTexCube.html'
+                                  title='glsl_optimizer_sys::kGlslTypeTexCube'>kGlslTypeTexCube</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.glslopt_cleanup.html'
+                                  title='glsl_optimizer_sys::glslopt_cleanup'>glslopt_cleanup</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.glslopt_get_log.html'
+                                  title='glsl_optimizer_sys::glslopt_get_log'>glslopt_get_log</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.glslopt_get_output.html'
+                                  title='glsl_optimizer_sys::glslopt_get_output'>glslopt_get_output</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.glslopt_get_raw_output.html'
+                                  title='glsl_optimizer_sys::glslopt_get_raw_output'>glslopt_get_raw_output</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.glslopt_get_status.html'
+                                  title='glsl_optimizer_sys::glslopt_get_status'>glslopt_get_status</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.glslopt_initialize.html'
+                                  title='glsl_optimizer_sys::glslopt_initialize'>glslopt_initialize</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.glslopt_optimize.html'
+                                  title='glsl_optimizer_sys::glslopt_optimize'>glslopt_optimize</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.glslopt_set_max_unroll_iterations.html'
+                                  title='glsl_optimizer_sys::glslopt_set_max_unroll_iterations'>glslopt_set_max_unroll_iterations</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.glslopt_shader_delete.html'
+                                  title='glsl_optimizer_sys::glslopt_shader_delete'>glslopt_shader_delete</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.glslopt_shader_get_input_count.html'
+                                  title='glsl_optimizer_sys::glslopt_shader_get_input_count'>glslopt_shader_get_input_count</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.glslopt_shader_get_input_desc.html'
+                                  title='glsl_optimizer_sys::glslopt_shader_get_input_desc'>glslopt_shader_get_input_desc</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.glslopt_shader_get_stats.html'
+                                  title='glsl_optimizer_sys::glslopt_shader_get_stats'>glslopt_shader_get_stats</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.glslopt_shader_get_texture_count.html'
+                                  title='glsl_optimizer_sys::glslopt_shader_get_texture_count'>glslopt_shader_get_texture_count</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.glslopt_shader_get_texture_desc.html'
+                                  title='glsl_optimizer_sys::glslopt_shader_get_texture_desc'>glslopt_shader_get_texture_desc</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.glslopt_shader_get_uniform_count.html'
+                                  title='glsl_optimizer_sys::glslopt_shader_get_uniform_count'>glslopt_shader_get_uniform_count</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.glslopt_shader_get_uniform_desc.html'
+                                  title='glsl_optimizer_sys::glslopt_shader_get_uniform_desc'>glslopt_shader_get_uniform_desc</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.glslopt_shader_get_uniform_total_size.html'
+                                  title='glsl_optimizer_sys::glslopt_shader_get_uniform_total_size'>glslopt_shader_get_uniform_total_size</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.glslopt_basic_type.html'
+                                  title='glsl_optimizer_sys::glslopt_basic_type'>glslopt_basic_type</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.glslopt_options.html'
+                                  title='glsl_optimizer_sys::glslopt_options'>glslopt_options</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.glslopt_precision.html'
+                                  title='glsl_optimizer_sys::glslopt_precision'>glslopt_precision</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.glslopt_shader_type.html'
+                                  title='glsl_optimizer_sys::glslopt_shader_type'>glslopt_shader_type</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.glslopt_target.html'
+                                  title='glsl_optimizer_sys::glslopt_target'>glslopt_target</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "glsl_optimizer_sys";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `glossy` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, glossy">
+
+    <title>glossy - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'></p><script>window.sidebarCurrent = {name: 'glossy', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>glossy</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-0' class='srclink' href='../src/glossy/lib.rs.html#1-63' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>Glossy is a GLSL source loading crate for Rust which supports the <code>#include</code>
+directive and shader optimization at compile time via
+<a href="https://github.com/aras-p/glsl-optimizer">glsl-optimizer</a>.</p>
+
+<p>Refer to the <a href="https://github.com/mathewv/rust-glossy">GitHub repository</a> for more information.</p>
+
+<h1 id='example-usage' class='section-header'><a href='#example-usage'>Example Usage</a></h1>
+<p>In build script <code>build.rs</code>:</p>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>glossy_codegen</span> <span class='kw'>as</span> <span class='ident'>glsl</span>;
+
+<span class='ident'>void</span> <span class='ident'>main</span>() {
+   <span class='ident'>glsl</span>::<span class='ident'>Config</span>::<span class='ident'>new</span>(<span class='ident'>glsl</span>::<span class='ident'>Language</span>::<span class='ident'>OpenGl</span>)
+       .<span class='ident'>vertex</span>(<span class='string'>&quot;shaders/*.vert&quot;</span>)
+       .<span class='ident'>fragment</span>(<span class='string'>&quot;shaders/*.frag&quot;</span>)
+       .<span class='ident'>include</span>(<span class='string'>&quot;shaders/include/*&quot;</span>)
+       .<span class='ident'>optimize</span>()
+       .<span class='ident'>build</span>();
+}<a class='test-arrow' target='_blank' href=''>Run</a></pre>
+
+<p>In Rust source file <code>main.rs</code>:</p>
+
+<pre class='rust rust-example-rendered'>
+<span class='attribute'>#[<span class='ident'>macro_use</span>]</span>
+<span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>glossy</span>;
+<span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>glium</span>;
+
+<span class='ident'>void</span> <span class='ident'>main</span>() {
+    <span class='comment'>// ...</span>
+    <span class='ident'>glium</span>::<span class='ident'>Program</span>::<span class='ident'>from_source</span>(<span class='ident'>gl</span>, <span class='macro'>shader</span><span class='macro'>!</span>(<span class='string'>&quot;sprite.vert&quot;</span>), <span class='macro'>shader</span><span class='macro'>!</span>(<span class='string'>&quot;sprite.frag&quot;</span>), <span class='prelude-val'>None</span>)
+        .<span class='ident'>unwrap</span>();
+    <span class='comment'>// ...</span>
+}<a class='test-arrow' target='_blank' href=''>Run</a></pre>
+
+<p>In shader source file <code>shader.frag</code>:</p>
+
+<pre><code class="language-glsl">#version 120
+#include &quot;common.glsl&quot;
+
+void main() {
+    float v = common_func(common_uniform);
+    // ...
+}
+</code></pre>
+</div><h2 id='macros' class='section-header'><a href="#macros">Macros</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='macro' href='macro.shader.html'
+                                  title='glossy::shader'>shader</a></td>
+                           <td class='docblock-short'>
+                                <p>Evaluates to a string of the glossy-processed shader source of the given filename.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='macro' href='macro.shader_id_to_name.html'
+                                  title='glossy::shader_id_to_name'>shader_id_to_name</a></td>
+                           <td class='docblock-short'>
+                                <p>Returns the name of the shader file for the given <strong>FILE</strong> value.</p>
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "glossy";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

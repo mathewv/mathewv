@@ -1,0 +1,1 @@
+initSidebarItems({"macro":[["shader","Evaluates to a string of the glossy-processed shader source of the given filename."],["shader_id_to_name","Returns the name of the shader file for the given __FILE__ value."]]});

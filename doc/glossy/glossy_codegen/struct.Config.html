@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Config` struct in crate `glossy_codegen`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Config">
+
+    <title>glossy_codegen::Config - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>glossy_codegen</a></p><script>window.sidebarCurrent = {name: 'Config', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>glossy_codegen</a>::<wbr><a class='struct' href=''>Config</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-51' class='srclink' href='../src/glossy_codegen/src/lib.rs.html#30-37' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Config { /* fields omitted */ }</pre><div class='docblock'><p>Configuration for the glossy shader preprocessor.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../glossy_codegen/struct.Config.html' title='glossy_codegen::Config'>Config</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-58' class='srclink' href='../src/glossy_codegen/src/lib.rs.html#39-428' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class='method'><span id='new.v' class='invisible'><code>fn <a href='#method.new' class='fnname'>new</a>(lang: <a class='enum' href='../glossy_codegen/enum.Language.html' title='glossy_codegen::Language'>Language</a>) -&gt; <a class='struct' href='../glossy_codegen/struct.Config.html' title='glossy_codegen::Config'>Config</a></code></span></h4>
+<div class='docblock'><p>Create a new blank configuration for loading GLSL shaders.</p>
+</div><h4 id='method.vertex' class='method'><span id='vertex.v' class='invisible'><code>fn <a href='#method.vertex' class='fnname'>vertex</a>(self, pattern: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>) -&gt; <a class='struct' href='../glossy_codegen/struct.Config.html' title='glossy_codegen::Config'>Config</a></code></span></h4>
+<div class='docblock'><p>Specify a glob pattern which adds the matching files to the list of shader sources as
+vertex shader sources.</p>
+</div><h4 id='method.fragment' class='method'><span id='fragment.v' class='invisible'><code>fn <a href='#method.fragment' class='fnname'>fragment</a>(self, pattern: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>) -&gt; <a class='struct' href='../glossy_codegen/struct.Config.html' title='glossy_codegen::Config'>Config</a></code></span></h4>
+<div class='docblock'><p>Specify a glob pattern which adds the matching files to the list of shader sources as
+fragment shader sources.</p>
+</div><h4 id='method.source' class='method'><span id='source.v' class='invisible'><code>fn <a href='#method.source' class='fnname'>source</a>(self, pattern: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>) -&gt; <a class='struct' href='../glossy_codegen/struct.Config.html' title='glossy_codegen::Config'>Config</a></code></span></h4>
+<div class='docblock'><p>Specify a glob pattern which adds the matching files to the list of shader sources.
+If the extension is &quot;vert&quot; or &quot;frag&quot;, they will be loaded as vertex and fragment
+shaders respectively. If not, they will be added to the list of generic shader files.
+Thus this function should really only be used to add non-vertex or fragment shader sources,
+as these are the only kinds that glsl-optimizer can optimize.</p>
+</div><h4 id='method.include' class='method'><span id='include.v' class='invisible'><code>fn <a href='#method.include' class='fnname'>include</a>(self, pattern: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>) -&gt; <a class='struct' href='../glossy_codegen/struct.Config.html' title='glossy_codegen::Config'>Config</a></code></span></h4>
+<div class='docblock'><p>Specify a glob pattern which adds the matching files to the list of include files.</p>
+</div><h4 id='method.optimize' class='method'><span id='optimize.v' class='invisible'><code>fn <a href='#method.optimize' class='fnname'>optimize</a>(self) -&gt; <a class='struct' href='../glossy_codegen/struct.Config.html' title='glossy_codegen::Config'>Config</a></code></span></h4>
+<div class='docblock'><p>Specify that the shaders should be optimized with glsl-optimizer. This is only available
+when the &#39;optimizer&#39; feature is enabled (which is the default option).</p>
+
+<p>This also implicitly sets the <code>discard_line_info()</code> option.</p>
+</div><h4 id='method.discard_line_info' class='method'><span id='discard_line_info.v' class='invisible'><code>fn <a href='#method.discard_line_info' class='fnname'>discard_line_info</a>(self) -&gt; <a class='struct' href='../glossy_codegen/struct.Config.html' title='glossy_codegen::Config'>Config</a></code></span></h4>
+<div class='docblock'><p>Do not preserve the line and file information in the shader.</p>
+
+<p>This option, when set, will strip all comments and empty lines, but will not modify
+whitespace or minify the shader otherwise. Most of the time, <code>optimize()</code> makes more sense
+than this option, though it might be useful for the very slight minification it can provide
+for shader sources that aren&#39;t supported by glsl-optimizer.</p>
+</div><h4 id='method.allow_untested_versions' class='method'><span id='allow_untested_versions.v' class='invisible'><code>fn <a href='#method.allow_untested_versions' class='fnname'>allow_untested_versions</a>(self) -&gt; <a class='struct' href='../glossy_codegen/struct.Config.html' title='glossy_codegen::Config'>Config</a></code></span></h4>
+<div class='docblock'><p>Allow the optimizer to work on untested language versions.</p>
+
+<p>According to the glsl-optimizer readme, versions of GLSL beyond 1.20 are untested. This flag
+allows glsl-optimizer to try optimizing them regardless.</p>
+</div><h4 id='method.build' class='method'><span id='build.v' class='invisible'><code>fn <a href='#method.build' class='fnname'>build</a>(self)</code></span></h4>
+<div class='docblock'><p>Process the specified GLSL shaders.</p>
+
+<p>This function will panic if the source files cannot be written, a recursive inclusion is
+detected, or if an error occurs during optimization. The optimizer can thus serve as a
+compile-time shader validator to a certain extent. Note that the error messages generated
+by the compiler will have inaccurate file line information, as it does not account for the</p>
+
+<h1 id='included-files-or-stripped-comments-the-optimizer-does-not-support-reading-comments' class='section-header'><a href='#included-files-or-stripped-comments-the-optimizer-does-not-support-reading-comments'>included files or stripped comments (the optimizer does not support reading comments).</a></h1></div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "glossy_codegen";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>
